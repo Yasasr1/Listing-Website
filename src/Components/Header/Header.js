@@ -19,7 +19,7 @@ class Header extends Component  {
         return (
             <MDBNavbar color="deep-purple darken-4" fixed="top" dark expand="md" scrolling transparent>
                 <MDBNavbarBrand>
-                    <strong className="white-text">Ratawate</strong> 
+                    <strong className="white-text">Ratawate.lk</strong> 
                 </MDBNavbarBrand>
                 {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
                 <MDBNavbarNav left>
