@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import Header from '../../Components/Header/Header';
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBFooter, MDBBtn, MDBInput } from
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBFooter, MDBBtn, MDBInput, MDBMask, MDBCarouselCaption } from
 "mdbreact";
-import { Grid, TextField } from '@material-ui/core';
-import roundImage from '../../assests/home_image.jpg';
+import { Grid, TextField, Paper } from '@material-ui/core';
+import { InputGroup, FormControl, Form } from 'react-bootstrap';
+import searchBackground from '../../assests/Home/1584.jpg';
+
+import slide1 from '../../assests/Home/slides/1.jpg';
+import slide2 from '../../assests/Home/slides/2.jpg';
+import slide3 from '../../assests/Home/slides/3.jpg';
 
 class Home extends Component {
     render() {
@@ -21,8 +26,9 @@ class Home extends Component {
             <MDBCarouselItem itemId="1">
             <MDBView>
               <img
+                className="d-block w-100 "
                 style={{width: '100%'}}
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"
+                src={slide1}
                 alt="First slide"
             />
             </MDBView>
@@ -31,7 +37,7 @@ class Home extends Component {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
+                src={slide2}
                 alt="Second slide"
               />
             </MDBView>
@@ -40,45 +46,49 @@ class Home extends Component {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                src={slide3}
                 alt="Third slide"
               />
             </MDBView>
             </MDBCarouselItem>
             </MDBCarouselInner>
         </MDBCarousel>
-
         <br/>
-        <Grid container justify="center" spacing={2}>
-            <Grid item md={6}>
-               <div style={{textAlign: 'center'}}>
-                    <strong style={{fontSize: '2rem'}}>Find the Best Places to Be</strong>
-                    <br/>
-                    <small style={{fontSize: '1rem'}} className="text-muted">All the top locations – from restaurants and clubs, to galleries, famous places and more..</small>
-               </div>
-               <br/>
-               <div className="form-group" style={{width: '60%', padding: '20px'}}>
-                    <Grid container spacing={4}>
-                        <Grid item md={10}>
-                            <MDBInput label="What are you looking for?"/>
-                        </Grid>
-                        <Grid item md={2}>
-                            <MDBBtn gradient="purple">Search</MDBBtn>
-                        </Grid>
-                    </Grid>
+
+        <Paper style={{backgroundImage: `url(${searchBackground})`,backgroundSize: '100% 100%',  padding: '10px', margin: '60px',marginLeft: '150px', marginRight: '150px'}}>
+          <Grid container justify="center" alignItems="center" spacing={2}>
+              <Grid item md={12}>
+                <div style={{textAlign: 'center'}}>
+                      <h2 className="display-4">Find the Best Places to Be</h2>
+                      <br/>
+                      <small style={{fontSize: '1rem'}} className="text-muted">All the top locations – from restaurants and clubs, to galleries, famous places and more..</small>
                 </div>
-            </Grid>
-            <Grid item md={6}>
-               <div style={{textAlign: 'center'}}>
-               <img
-                src={roundImage}
-                className="img-fluid rounded-circle hoverable"
-                alt="travel"
-                style={{height: '50%', width: '50%'}}
-                />
-               </div>
-            </Grid>
-        </Grid>
+                <br/>
+              </Grid>
+              <Grid item md={7}>
+                <InputGroup size="lg">
+                  <FormControl
+                  placeholder="What are you looking for?"
+                  style={{width: '70%'}}
+                  />
+                  <Form.Control as="select" style={{width: '30%'}} >
+                    <option>Select a Location</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </Form.Control>
+                </InputGroup>
+              </Grid>
+              <Grid item md={1}>
+              <MDBBtn gradient="purple">Search</MDBBtn>
+              </Grid>
+              <br/>
+          </Grid>
+        </Paper>
+
+       
 
 
             
