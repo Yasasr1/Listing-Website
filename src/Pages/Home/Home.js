@@ -21,7 +21,42 @@ class Home extends Component {
         showControls={true}
         showIndicators={true}
         className="z-depth-1"
+        style={{position: 'relative'}}
         >
+          <div style={{position: 'absolute', zIndex: '4000', marginTop: '350px', marginLeft: '200px', marginRight: '200px'}}>
+          <Paper className="shadow p-3 mb-5 bg-white rounded" style={{ padding: '10px'}}>
+          <Grid container justify="center" alignItems="center" spacing={2}>
+              <Grid item md={12}>
+                <div style={{textAlign: 'center'}}>
+                      <h2 className="display-4">Find the Best Places to Be</h2>
+                      
+                      <small className="text-muted" style={{fontSize: '1rem'}}>All the top locations – from restaurants and clubs, to galleries, famous places and more..</small>
+                </div>
+                <br/>
+              </Grid>
+              <Grid item md={7}>
+                <InputGroup size="lg">
+                  <FormControl
+                  placeholder="What are you looking for?"
+                  style={{width: '60%'}}
+                  />
+                  <Form.Control as="select" style={{width: '40%'}} >
+                    <option>Select a Location</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </Form.Control>
+                </InputGroup>
+              </Grid>
+              <Grid item md={1}>
+              <MDBBtn gradient="purple">Search</MDBBtn>
+              </Grid>
+              <br/>
+          </Grid>
+        </Paper>
+          </div>
         <MDBCarouselInner>
             <MDBCarouselItem itemId="1">
             <MDBView>
@@ -55,38 +90,7 @@ class Home extends Component {
         </MDBCarousel>
         <br/>
 
-        <Paper style={{backgroundImage: `url(${searchBackground})`,backgroundSize: '100% 100%',  padding: '10px', margin: '60px',marginLeft: '150px', marginRight: '150px'}}>
-          <Grid container justify="center" alignItems="center" spacing={2}>
-              <Grid item md={12}>
-                <div style={{textAlign: 'center'}}>
-                      <h2 className="display-4">Find the Best Places to Be</h2>
-                      <br/>
-                      <small style={{fontSize: '1rem'}} className="text-muted">All the top locations – from restaurants and clubs, to galleries, famous places and more..</small>
-                </div>
-                <br/>
-              </Grid>
-              <Grid item md={7}>
-                <InputGroup size="lg">
-                  <FormControl
-                  placeholder="What are you looking for?"
-                  style={{width: '70%'}}
-                  />
-                  <Form.Control as="select" style={{width: '30%'}} >
-                    <option>Select a Location</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </Form.Control>
-                </InputGroup>
-              </Grid>
-              <Grid item md={1}>
-              <MDBBtn gradient="purple">Search</MDBBtn>
-              </Grid>
-              <br/>
-          </Grid>
-        </Paper>
+        
 
        
 
