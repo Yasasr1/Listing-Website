@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Header from '../../Components/Header/Header';
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBFooter, MDBBtn, MDBInput, MDBMask, MDBCarouselCaption } from
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBFooter, MDBBtn, MDBCard, MDBIcon, MDBCardTitle } from
 "mdbreact";
-import { Grid, TextField, Paper } from '@material-ui/core';
+import { Grid,Paper } from '@material-ui/core';
 import { InputGroup, FormControl, Form } from 'react-bootstrap';
-import searchBackground from '../../assests/Home/1584.jpg';
+import './Home.css';
 
 import slide1 from '../../assests/Home/slides/1.jpg';
 import slide2 from '../../assests/Home/slides/2.jpg';
@@ -23,7 +23,7 @@ class Home extends Component {
         className="z-depth-1"
         style={{position: 'relative'}}
         >
-          <div style={{position: 'absolute', zIndex: '4000', marginTop: '350px', marginLeft: '200px', marginRight: '200px'}}>
+          <div className="HomeSearchDiv">
           <Paper className="shadow p-3 mb-5 bg-white rounded" style={{ padding: '10px'}}>
           <Grid container justify="center" alignItems="center" spacing={2}>
               <Grid item md={12}>
@@ -90,6 +90,80 @@ class Home extends Component {
         </MDBCarousel>
         <br/>
 
+        <Grid container spacing={8} style={{margin: '100px'}}>
+          <Grid item md={3}>
+            <Paper>
+              <MDBCard
+              className='card-image'
+              style={{
+                backgroundImage:
+                  "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')"
+              }}
+              >
+                <div className='text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4'>
+                  <div>
+                    <MDBIcon icon="utensils" size="lg" />"
+                    <MDBCardTitle tag='h3' className='pt-2'>
+                      <strong>Restuarents</strong>
+                    </MDBCardTitle>
+                    <MDBBtn color='deep-purple'>
+                      <MDBIcon icon='clone left'/> View Listings
+                    </MDBBtn>
+                  </div>
+                </div>
+              </MDBCard>
+            </Paper>
+          </Grid>
+
+          <Grid item md={3}>
+            <Paper>
+              <MDBCard
+              className='card-image'
+              style={{
+                backgroundImage:
+                  "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')"
+              }}
+              >
+                <div className='text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4'>
+                  <div>
+                    <MDBIcon icon="utensils" size="lg" />"
+                    <MDBCardTitle tag='h3' className='pt-2'>
+                      <strong>Hotels</strong>
+                    </MDBCardTitle>
+                    <MDBBtn color='deep-purple'>
+                      <MDBIcon icon='clone left'/> View Listings
+                    </MDBBtn>
+                  </div>
+                </div>
+              </MDBCard>
+            </Paper>
+          </Grid>
+
+          <Grid item md={3}>
+            <Paper>
+              <MDBCard
+              className='card-image'
+              style={{
+                backgroundImage:
+                  "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')"
+              }}
+              >
+                <div className='text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4'>
+                  <div>
+                    <MDBIcon icon="utensils" size="lg" />"
+                    <MDBCardTitle tag='h3' className='pt-2'>
+                      <strong>Locations</strong>
+                    </MDBCardTitle>
+                    <MDBBtn color='deep-purple'>
+                      <MDBIcon icon='clone left'/> View Listings
+                    </MDBBtn>
+                  </div>
+                </div>
+              </MDBCard>
+            </Paper>
+          </Grid>
+        </Grid>
+        
         
 
        

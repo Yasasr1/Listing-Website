@@ -1,0 +1,14 @@
+.HomeSearchDiv {
+    position: absolute;
+    z-index: 1000;
+    margin-top: 350px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+@media screen and (max-width: 1050px) {
+    .HomeSearchDiv {
+        margin-top: 80px;
+    }
+  }
+
