@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../../Components/Header/Header';
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBFooter, MDBBtn, MDBCard, MDBIcon, MDBCardTitle } from
-"mdbreact";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView,MDBBtn} from "mdbreact";
 import { Grid,Paper } from '@material-ui/core';
-import { InputGroup, FormControl, Form } from 'react-bootstrap';
+import { InputGroup, FormControl, Form, Card,Button, Container, Row, Col } from 'react-bootstrap';
 import './Home.css';
 
 import slide1 from '../../assests/Home/slides/1.jpg';
@@ -11,16 +10,15 @@ import slide2 from '../../assests/Home/slides/2.jpg';
 import slide3 from '../../assests/Home/slides/3.jpg';
 
 class Home extends Component {
-    render() {
-        return (
-            <div>
-                <Header/>
+  render() {
+    return (
+      <div>
+        <Header/>
         <MDBCarousel
         activeItem={1}
         length={3}
         showControls={true}
         showIndicators={true}
-        className="z-depth-1"
         style={{position: 'relative'}}
         >
           <div className="HomeSearchDiv">
@@ -87,131 +85,40 @@ class Home extends Component {
             </MDBView>
             </MDBCarouselItem>
             </MDBCarouselInner>
-        </MDBCarousel>
-        <br/>
+      </MDBCarousel>
+      <br/>
 
-        <Grid container spacing={8} style={{margin: '100px'}}>
-          <Grid item md={3}>
-            <Paper>
-              <MDBCard
-              className='card-image'
-              style={{
-                backgroundImage:
-                  "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')"
-              }}
-              >
-                <div className='text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4'>
-                  <div>
-                    <MDBIcon icon="utensils" size="lg" />"
-                    <MDBCardTitle tag='h3' className='pt-2'>
-                      <strong>Restuarents</strong>
-                    </MDBCardTitle>
-                    <MDBBtn color='deep-purple'>
-                      <MDBIcon icon='clone left'/> View Listings
-                    </MDBBtn>
-                  </div>
-                </div>
-              </MDBCard>
-            </Paper>
-          </Grid>
+      <Container >
+      <Row className="justify-content-md-center">
+        <Col md={{offset: 1 }}>
+        <Card style={{textAlign: 'center', width: '18rem'}}>
+            <Card.Img variant="top" src={slide2}/>
+            <Card.Body>
+              <Card.Title>Restuarents</Card.Title>
+              <Button variant="primary">View Listings</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={{offset: 1 }}>
+        <Card style={{textAlign: 'center', width: '18rem'}}>
+            <Card.Img variant="top" src={slide2}/>
+            <Card.Body>
+              <Card.Title>Hotels</Card.Title>
+              <Button variant="primary">View Listings</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      </Container>
 
-          <Grid item md={3}>
-            <Paper>
-              <MDBCard
-              className='card-image'
-              style={{
-                backgroundImage:
-                  "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')"
-              }}
-              >
-                <div className='text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4'>
-                  <div>
-                    <MDBIcon icon="utensils" size="lg" />"
-                    <MDBCardTitle tag='h3' className='pt-2'>
-                      <strong>Hotels</strong>
-                    </MDBCardTitle>
-                    <MDBBtn color='deep-purple'>
-                      <MDBIcon icon='clone left'/> View Listings
-                    </MDBBtn>
-                  </div>
-                </div>
-              </MDBCard>
-            </Paper>
-          </Grid>
-
-          <Grid item md={3}>
-            <Paper>
-              <MDBCard
-              className='card-image'
-              style={{
-                backgroundImage:
-                  "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')"
-              }}
-              >
-                <div className='text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4'>
-                  <div>
-                    <MDBIcon icon="utensils" size="lg" />"
-                    <MDBCardTitle tag='h3' className='pt-2'>
-                      <strong>Locations</strong>
-                    </MDBCardTitle>
-                    <MDBBtn color='deep-purple'>
-                      <MDBIcon icon='clone left'/> View Listings
-                    </MDBBtn>
-                  </div>
-                </div>
-              </MDBCard>
-            </Paper>
-          </Grid>
-        </Grid>
-        
-        
-
-       
-
-
-            
-
-    <MDBFooter color="deep-purple darken-4" className="font-small pt-4 mt-4">
-      <MDBContainer fluid className="text-center text-md-left">
-        <MDBRow>
-          <MDBCol md="6">
-            <h5 className="title">Footer Content</h5>
-            <p>
-              Here you can use rows and columns here to organize your footer
-              content.
-            </p>
-          </MDBCol>
-          <MDBCol md="6">
-            <h5 className="title">Links</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Link 1</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 2</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 3</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
-      <div className="footer-copyright text-center py-3">
-        <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.ratawate.lk"> Ratawate.lk </a>
-        </MDBContainer>
-      </div>
-    </MDBFooter>
-
-    
-
-            </div>
-        );
-    }
+      <footer className="page-footer font-small blue">
+        <div className="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="#"> Ratawate.lk</a>
+        </div>
+      </footer>
+    </div>
+    );
+  }
 };
 
 export default Home;

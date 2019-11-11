@@ -6,7 +6,7 @@ import {
 class Header extends Component  {
     state = {
         collapse: false,
-      isWideEnough: false,
+      
     }
 
     onClick = () => {
@@ -21,7 +21,6 @@ class Header extends Component  {
                 <MDBNavbarBrand>
                     <strong className="white-text">Ratawate.lk</strong> 
                 </MDBNavbarBrand>
-                {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
                 <MDBNavbarNav left>
                 <MDBNavItem active>
                   <MDBNavLink to="#!">Home</MDBNavLink>

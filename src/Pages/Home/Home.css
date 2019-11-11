@@ -4,11 +4,21 @@
     margin-top: 350px;
     margin-right: 200px;
     margin-left: 200px;
+    
 }
+
 
 @media screen and (max-width: 1050px) {
     .HomeSearchDiv {
         margin-top: 80px;
+        margin-right: 10px;
+        margin-left: 10px;
     }
-  }
+}
+
+@media screen and (max-width: 730px) {
+    .HomeSearchDiv {
+        visibility: hidden;
+    }
+}
 
