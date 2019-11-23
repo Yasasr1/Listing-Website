@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../../Components/Header/Header';
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView,MDBBtn} from "mdbreact";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView,MDBBtn, MDBContainer, MDBRow, MDBCol} from "mdbreact";
 import { Grid,Paper } from '@material-ui/core';
 import { InputGroup, FormControl, Form, Card,Button, Container, Row, Col } from 'react-bootstrap';
 import './Home.css';
@@ -25,9 +25,8 @@ class Home extends Component {
           <Paper className="shadow p-3 mb-5 bg-white rounded" style={{ padding: '10px'}}>
           <Grid container justify="center" alignItems="center" spacing={2}>
               <Grid item md={12}>
-                <div style={{textAlign: 'center'}}>
-                      <h2 className="display-4">Find the Best Places to Be</h2>
-                      
+                <div className="HomeSearchBar">
+                      <h2 className="HomeSearchBar">Find the Best Places to Be</h2>
                       <small className="text-muted" style={{fontSize: '1rem'}}>All the top locations – from restaurants and clubs, to galleries, famous places and more..</small>
                 </div>
                 <br/>
@@ -88,28 +87,18 @@ class Home extends Component {
       </MDBCarousel>
       <br/>
 
-      <Container >
-      <Row className="justify-content-md-center">
-        <Col md={{offset: 1 }}>
-        <Card style={{textAlign: 'center', width: '18rem'}}>
-            <Card.Img variant="top" src={slide2}/>
-            <Card.Body>
-              <Card.Title>Restuarents</Card.Title>
-              <Button variant="primary">View Listings</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={{offset: 1 }}>
-        <Card style={{textAlign: 'center', width: '18rem'}}>
-            <Card.Img variant="top" src={slide2}/>
-            <Card.Body>
-              <Card.Title>Hotels</Card.Title>
-              <Button variant="primary">View Listings</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-      </Container>
+      <h3 className="text-center">
+        <strong>Browse hundreds of listings </strong>
+        <small className="text-muted">Restuarents, Hotels and more</small>
+      </h3>
+
+      <MDBContainer style={{textAlign: 'center'}}>
+        <MDBRow>
+          <MDBCol md="4"><Button fullwidth>Restuarents</Button></MDBCol>
+          <MDBCol md="4"><Button>Hotels</Button></MDBCol>
+          <MDBCol md="4"><Button>Destinations</Button></MDBCol>
+        </MDBRow>
+      </MDBContainer>
 
       <footer className="page-footer font-small blue">
         <div className="footer-copyright text-center py-3">© 2019 Copyright:
@@ -122,3 +111,25 @@ class Home extends Component {
 };
 
 export default Home;
+
+
+/*<MDBContainer style={{float: 'center'}}>
+        <MDBRow>
+          <MDBCol md="4"><Button fullwidth>Test</Button></MDBCol>
+          <MDBCol md="4"><Button>Test</Button></MDBCol>
+          <MDBCol md="4"><Button>Test</Button></MDBCol>
+        </MDBRow>
+      </MDBContainer>*/
+
+
+      /*<Grid style={{textAlign: 'center'}} container spacing={3}>
+        <Grid item md={4}>
+          <Button fullwidth>Test</Button>
+        </Grid>
+        <Grid item md={4}>
+          <Button fullwidth>Test</Button>
+        </Grid>
+        <Grid item md={4}>
+          <Button fullwidth>Test</Button>
+        </Grid>
+      </Grid>*/

@@ -7,6 +7,11 @@
     
 }
 
+.HomeSearchBar {
+    font-size: xx-large;
+    text-align: center;
+}
+
 
 @media screen and (max-width: 1050px) {
     .HomeSearchDiv {
@@ -17,8 +22,11 @@
 }
 
 @media screen and (max-width: 730px) {
-    .HomeSearchDiv {
-        visibility: hidden;
+    
+    .HomeSearchBar {
+        font-size: medium;
+        text-align: center;
+        
     }
 }
 
