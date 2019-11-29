@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../../Components/Header/Header';
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView,MDBBtn, MDBContainer, MDBRow, MDBCol} from "mdbreact";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView,MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBCardText, MDBCardTitle, MDBIcon, MDBFooter} from "mdbreact";
 import { Grid,Paper } from '@material-ui/core';
 import { InputGroup, FormControl, Form, Card,Button, Container, Row, Col } from 'react-bootstrap';
 import './Home.css';
@@ -94,17 +94,111 @@ class Home extends Component {
 
       <MDBContainer style={{textAlign: 'center'}}>
         <MDBRow>
-          <MDBCol md="4"><Button fullwidth>Restuarents</Button></MDBCol>
-          <MDBCol md="4"><Button>Hotels</Button></MDBCol>
-          <MDBCol md="4"><Button>Destinations</Button></MDBCol>
+          <MDBCol md="4">
+            <MDBCard>
+              <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+              <MDBCardBody>
+                <MDBCardTitle>Hotels</MDBCardTitle>
+                <MDBCardText>
+                  You can browse hotels and select one
+                </MDBCardText>
+                <MDBBtn href="#">Explore</MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol md="4">
+          <MDBCard>
+              <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+              <MDBCardBody>
+                <MDBCardTitle>Restuarents</MDBCardTitle>
+                <MDBCardText>
+                  You can browse Restuarents and select one
+                </MDBCardText>
+                <MDBBtn href="#">Explore</MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol md="4">
+          <MDBCard>
+            <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+            <MDBCardBody>
+              <MDBCardTitle>Destinations</MDBCardTitle>
+              <MDBCardText>
+                You can browse destinations and select one
+              </MDBCardText>
+              <MDBBtn href="#">Explore</MDBBtn>
+            </MDBCardBody>
+          </MDBCard>
+          </MDBCol>
         </MDBRow>
       </MDBContainer>
 
-      <footer className="page-footer font-small blue">
-        <div className="footer-copyright text-center py-3">© 2019 Copyright:
-          <a href="#"> Ratawate.lk</a>
-        </div>
-      </footer>
+      <section style={{backgroundColor: 'white', padding: '20px'}} className="text-center my-5">
+        <h2 >Why are we unique?</h2>
+        <br/>
+        <MDBRow>
+          <MDBCol md="4">
+            <MDBIcon icon="map" size="3x" className="blue-text"/>
+            <h5 className="font-weight-bold my-4">Find the perfect destination</h5>
+            <p className="grey-text mb-md-0 mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Reprehenderit maiores aperiam minima assumenda deleniti hic.
+            </p>
+          </MDBCol>
+          <MDBCol md="4">
+            <MDBIcon icon="map-pin" size="3x" className="orange-text" />
+            <h5 className="font-weight-bold my-4">Discover the best restuarents</h5>
+            <p className="grey-text mb-md-0 mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Reprehenderit maiores aperiam minima assumenda deleniti hic.
+            </p>
+          </MDBCol>
+          <MDBCol md="4">
+            <MDBIcon icon="heart" size="3x" className="red-text" />
+            <h5 className="font-weight-bold my-4">Enjoy your vacation</h5>
+            <p className="grey-text mb-md-0 mb-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Reprehenderit maiores aperiam minima assumenda deleniti hic.
+            </p>
+          </MDBCol>
+        </MDBRow>
+      </section>
+
+      <MDBFooter color="deep-purple darken-4" className="font-small pt-4 mt-4">
+      <MDBContainer fluid className="text-center text-md-left">
+        <MDBRow>
+          <MDBCol md="6">
+            <h5 className="title">Footer Content</h5>
+            <p>
+              Here you can use rows and columns here to organize your footer
+              content.
+            </p>
+          </MDBCol>
+          <MDBCol md="6">
+            <h5 className="title">Links</h5>
+            <ul>
+              <li className="list-unstyled">
+                <a href="#!">Link 1</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">Link 2</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">Link 3</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+      <div className="footer-copyright text-center py-3">
+        <MDBContainer fluid>
+          &copy; {new Date().getFullYear()} Copyright: <a href="#"> Ratawate.lk </a>
+        </MDBContainer>
+      </div>
+    </MDBFooter>
     </div>
     );
   }
