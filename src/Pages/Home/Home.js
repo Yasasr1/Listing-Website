@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Header from '../../Components/Header/Header';
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView,MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBCardText, MDBCardTitle, MDBIcon, MDBFooter} from "mdbreact";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView,MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBCardText, MDBCardTitle, MDBIcon, MDBFooter, MDBAnimation} from "mdbreact";
 import { Grid,Paper } from '@material-ui/core';
-import { InputGroup, FormControl, Form, Card,Button, Container, Row, Col } from 'react-bootstrap';
+import { InputGroup, FormControl, Form} from 'react-bootstrap';
 import './Home.css';
+import ResturentInfo from './RestuarentInfo/RestuarentInfo';
 
 import slide1 from '../../assests/Home/slides/1.jpg';
 import slide2 from '../../assests/Home/slides/2.jpg';
@@ -133,6 +134,20 @@ class Home extends Component {
         </MDBRow>
       </MDBContainer>
 
+      
+      <div style={{textAlign: 'center', padding: '20px', backgroundColor: '#dfdae3',marginTop: '200px'}}>
+        <h2 style={{fontWeight: 'bold'}}>Top Listings around Sri Lanka</h2>
+        <br/>
+        <MDBAnimation reveal type="fadeInDown">
+          <ResturentInfo/>
+        </MDBAnimation>
+        <MDBAnimation reveal type="fadeInDown">
+          <ResturentInfo/>
+        </MDBAnimation>
+      </div>
+      
+      
+
       <section style={{backgroundColor: 'white', padding: '20px'}} className="text-center my-5">
         <h2 >Why are we unique?</h2>
         <br/>
@@ -205,25 +220,3 @@ class Home extends Component {
 };
 
 export default Home;
-
-
-/*<MDBContainer style={{float: 'center'}}>
-        <MDBRow>
-          <MDBCol md="4"><Button fullwidth>Test</Button></MDBCol>
-          <MDBCol md="4"><Button>Test</Button></MDBCol>
-          <MDBCol md="4"><Button>Test</Button></MDBCol>
-        </MDBRow>
-      </MDBContainer>*/
-
-
-      /*<Grid style={{textAlign: 'center'}} container spacing={3}>
-        <Grid item md={4}>
-          <Button fullwidth>Test</Button>
-        </Grid>
-        <Grid item md={4}>
-          <Button fullwidth>Test</Button>
-        </Grid>
-        <Grid item md={4}>
-          <Button fullwidth>Test</Button>
-        </Grid>
-      </Grid>*/
